@@ -1,0 +1,4 @@
+<template name="content02">
+  <view>{{"template模块插入"}}</view>
+  <view>{{content02}}</view>
+</template>

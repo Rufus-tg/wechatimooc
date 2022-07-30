@@ -1,0 +1,127 @@
+.header-input{
+  padding: 0 36rpx;
+  line-height: 72rpx;
+  border-radius: 36rpx;
+  margin: 22rpx 36rpx 14rpx 36rpx;
+  border: 1rpx solid #D9DDE1;
+  text-align: center;
+}
+.header-input-placeholder{
+  color: rgba(133,133,133,0.60);
+  font-size: 26rpx;
+}
+.header-input-icon{
+  /* width: 25rpx; */
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  transform: translateX(-200rpx)scale(0.8);
+  color: rgba(133,133,133,0.60);
+}
+.navigator{
+  display: flex;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  color: #2B333B;
+  margin-bottom: 30rpx;
+}
+.navigator-item{
+flex: 1;
+text-align:center;
+vertical-align: middle;
+}
+.navigator-img{
+  width: 50rpx;
+    height: 50rpx;
+    position: relative;
+    top: 10rpx;
+/* transform: translateY(10rpx); */
+}
+.navigator-avtive{
+  width: 40rpx;
+  height: 5rpx;
+  background: red;
+  border-radius: 5rpx;
+  position: absolute;
+ margin-left:90rpx ;
+}
+swiper{
+  height: 232rpx !important;
+}
+swiper-item{
+box-sizing: border-box;
+padding: 0 6rpx;
+/* border-radius: 25rpx; */
+}
+.swiper-image{
+  width: 702rpx;
+  height: 232rpx;
+  border-radius: 35rpx;
+}
+.project{
+  margin:0 0 0 40rpx;
+}
+.project-title{
+  line-height: 32rpx;
+  font-size: 28rpx;
+  color: #2B333B;
+  font-weight: bold;
+}
+.project-item{
+  display: flex;
+  margin-top:30rpx ;
+}
+.project-item-pic{
+  width: 208rpx;
+  height: 136rpx;
+  border-radius: 16rpx;
+}
+.project-item-content{
+  flex: 1;
+  display: flex;
+  margin-left:24rpx ;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #D9DDE1;
+}
+.box-left{
+  flex: 0.8;
+}
+.box-right{
+  flex: 0.5;
+  position: relative;
+}
+.project-item-title{
+  width: 273rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  color: #2B333B;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* line-clamp: 2; */
+}
+.project-item-tag{
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #71777D;
+
+}
+.project-item-price{
+  padding: 12rpx 36rpx;
+    background: rgba(43,51,59,.06);
+    border-radius: 50rpx;
+    color: #71777D;
+    font-size: 30rpx;
+    position: absolute;
+    top: 29rpx;
+}
+.project-item-user{
+  width: 30rpx;
+  height: 30rpx;
+}
+.project-empty{
+  font-weight: bold;
+}

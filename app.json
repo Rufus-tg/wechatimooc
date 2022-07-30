@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shopcat/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "慕课",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+    
+  },
+  "tabBar": {
+    "color": "#9e9e9e",
+    "selectedColor": "#2B223B",
+    "list":[{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "resources/首页.png",
+      "selectedIconPath": "resources/首页-fill.png"
+    },{
+      "pagePath": "pages/shopcat/index",
+      "text": "购物车",
+      "iconPath": "resources/购物车.png",
+      "selectedIconPath": "resources/3.1购物车-选中.png"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "我的",
+      "iconPath": "resources/224用户-线性.png",
+      "selectedIconPath": "resources/224用户.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+  
+}
