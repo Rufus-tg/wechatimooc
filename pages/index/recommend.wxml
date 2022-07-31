@@ -1,0 +1,34 @@
+<block wx:if="{{navigatortype =='推荐'}}">
+  <swiper previous-margin="0" next-margin="0" circular="{{true}}" autoplay="{{true}}">
+    <swiper-item wx:for="{{swiperarr}}" wx:key="src">
+      <image class="swiper-image" src="{{item.src}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="project">
+  <navigator url="../hot/hot">
+    <text class="project-title">
+      实战推荐
+    </text>
+  </navigator>
+    <text class="project-empty" hidden="{{!(searchlist && searchlist.length==0)}}">无搜索结果</text>
+    <view bindtap="handclick" class="project-item" wx:for="{{searchlist ? searchlist : projectarr}}" wx:key="src" data-id="{{item.usernum}}">
+      <image class="project-item-pic" src="{{item.src}}"></image>
+      <view class="project-item-content">
+        <view class="box-left">
+          <view class="project-item-title">
+            {{item.title}}
+          </view>
+          <view class="project-item-tag">
+            <text class="project-item-text">{{item.tag}}</text>
+            <text style="margin: 0 10rpx;"> · </text>
+            <image class="project-item-user" src="../../resources/用户-角色-用户名-单人_jurassic.png"></image>
+            <text> {{item.usernum}} </text>
+          </view>
+        </view>
+        <view class="box-right">
+          <text class="project-item-price">{{'￥'+item.price}}</text>
+        </view>
+      </view>
+    </view>
+</view>
+</block>

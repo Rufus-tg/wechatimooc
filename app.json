@@ -1,8 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/hot/hot",
     "pages/shopcat/index",
-    "pages/logs/logs"
+    "pages/person/person",
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"dark",
@@ -26,7 +28,7 @@
       "iconPath": "resources/购物车.png",
       "selectedIconPath": "resources/3.1购物车-选中.png"
     },{
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/person/person",
       "text": "我的",
       "iconPath": "resources/224用户-线性.png",
       "selectedIconPath": "resources/224用户.png"

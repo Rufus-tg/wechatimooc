@@ -1,0 +1,13 @@
+<block wx:if="{{navigatortype =='轨迹'}}">
+<text class="project-title">
+轨迹内容
+</text>
+</block>
+<block wx:if="{{navigatortype =='实战'}}">
+<text class="project-title">
+实战项目
+</text>
+</block>
+<block wx:if="{{navigatortype =='活动'}}">
+<image class="activity-item" wx:for="{{activearr}}" wx:key="src" src="{{item.src}}"></image>
+</block>

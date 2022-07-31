@@ -1,0 +1,29 @@
+<view bindtap="Tagschange" class="tabs">
+<view data-type="实战排行" class="tab active">实战排行
+<view hidden="{{tabstype !=='实战排行'}}" class="active-bar"></view>
+</view>
+<view data-type="路径排行" class="tab">路径排行
+  <view hidden="{{tabstype !=='路径排行'}}" class="active-bar"></view>
+</view>
+</view>
+<view bindtap="Tagchange" class="time">
+<view data-type="周" class="week {{tabtype =='周' ? 'time-active' : ''}}">周</view>
+<view data-type="月" class="month {{tabtype =='月' ? 'time-active' : ''}}">月</view>
+</view>
+<view class="list">
+  <view wx:for="{{showlist}}" wx:key="index" class="item">
+<image class="item-img" src="{{item.src}}"></image>
+<view class="item-title"> 
+<view class="item-title-inner">
+ {{item.title}}
+</view>
+</view>
+<view class="item-number">
+<image wx:if="{{index===0}}" class="item-numimg" src="../../resources/奖杯5-1.png"></image>
+<image wx:elif="{{index===1}}" class="item-numimg" src="../../resources/奖杯5-2.png"></image>
+<image wx:elif="{{index===2}}" class="item-numimg" src="../../resources/奖杯5-3.png"></image>
+<view class="item-num" wx:else>{{index+1}}</view>
+</view>
+</view>
+
+</view>

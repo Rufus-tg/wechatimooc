@@ -4,13 +4,17 @@
 
 Page({
   data:{
+    id:undefined,
     that:[],
     iconarr:[],
     showIcon:true,
     swiperarr:[],
     projectarr:[],
     searchlist:null,
-    searchempty:false
+    searchempty:false,
+    navigatortype:'推荐',
+    bgarr:['red','purple','gold','blue'],
+    activearr:[],
 //  iconarr:[{src:'../../resources/推荐.png',title:'推荐'},{src:'../../resources/绿洲_路径_轨迹.png',title:'轨迹'},{src:'../../resources/防护.png',title:'实战'},{src:'../../resources/储值活动.png',title:'活动'}],
 //  showIcon:true,
 //  swiperarr:[{src:'https://img.mukewang.com/62c650fd09e34f1218000600.png'},{src:'https://img.mukewang.com/62af35af099273e218000600.png'},{src:'https://img.mukewang.com/62d4c68c0971cdcb00000000.png'}],
@@ -26,8 +30,8 @@ Page({
 
         const {data:{data}}=res;
         console.log(data)
-        const {iconarr,swiperarr,projectarr}=data;
-        thar.setData({iconarr,swiperarr,projectarr});
+        const {iconarr,swiperarr,projectarr,activearr}=data;
+        thar.setData({iconarr,swiperarr,projectarr,activearr});
      
       }
     })
@@ -89,4 +93,16 @@ if(value){
 }
  // value ? this.setData({showIcon:false}):this.setData({showIcon:true})
  this.setData({showIcon: value? false : true,searchlist})
- }})
+ },
+ changeType(e){
+// console.log(this.data.navigatortype)
+// console.log(e.target.dataset.type)
+this.setData({navigatortype: e.target.dataset.type ? e.target.dataset.type : e.target.dataset.type})
+ },handclick(e){
+console.log(e.currentTarget.dataset.id)
+const {id}=e.currentTarget.dataset;
+wx.navigateTo({
+  url: `/pages/detail/detail?id=${id}`,
+})
+ }
+})
